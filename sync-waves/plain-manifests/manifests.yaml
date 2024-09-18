@@ -2,8 +2,8 @@
 apiVersion: batch/v1
 kind: Job
 metadata:
+  name: upgrade-sql-schema-1
   argocd.argoproj.io/hook: PreSync
-  generateName: upgrade-sql-schema-1
 spec:
   template:
     spec:
@@ -18,7 +18,7 @@ kind: Job
 metadata:
   argocd.argoproj.io/hook: PreSync
   argocd.argoproj.io/sync-wave: "1"
-  generateName: upgrade-sql-schema-2
+  name: upgrade-sql-schema-2
 spec:
   template:
     spec:
